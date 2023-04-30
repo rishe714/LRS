@@ -5,16 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start": "node backend/index.js",
-    "server": "nodemon backend/index.js"
+    "server": "nodemon backend/index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Rishi Sharma",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
+    "concurrently": "^8.0.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.1.0"
   },
   "devDependencies": {
